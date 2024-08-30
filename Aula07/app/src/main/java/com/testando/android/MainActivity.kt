@@ -34,32 +34,29 @@ MainActivity : AppCompatActivity() {
             insets
         }
 
-        //Chamando os botoes
-
+        // Chamando os botoes
         textInputReal = findViewById(R.id.textInputReal)
         textInputDolar = findViewById(R.id.textInputDolar)
 
         txtReal = findViewById(R.id.txtReal)
         txtDolar = findViewById(R.id.txtDolar)
 
+        // Define o tipo de entrada para números decimais
+        txtReal.inputType = android.text.InputType.TYPE_CLASS_NUMBER or android.text.InputType.TYPE_NUMBER_FLAG_DECIMAL
+        txtDolar.inputType = android.text.InputType.TYPE_CLASS_NUMBER or android.text.InputType.TYPE_NUMBER_FLAG_DECIMAL
+
         btnCalcular = findViewById(R.id.btnCalcular)
         btnCalcular.setOnClickListener {
-
             var valorReal = txtReal.text.toString()
             var valorDolar = valorReal.toFloat() / 5.6
-
             txtDolar.setText("$valorDolar")
         }
 
         btnDolar = findViewById(R.id.btnDolar)
         btnDolar.setOnClickListener {
-
             var valorDolar = txtDolar.text.toString()
             var valorReal = valorDolar.toFloat() * 5.6
-
             txtReal.setText("$valorReal")
         }
-
-
     }
 }
