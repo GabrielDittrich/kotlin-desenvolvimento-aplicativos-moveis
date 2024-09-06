@@ -8,7 +8,7 @@ import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var txtNome: TextInputEditText
+    private lateinit var txtNome: TextInputEditText // Testo que a pessoa digitou
     private lateinit var btnCadastrar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
