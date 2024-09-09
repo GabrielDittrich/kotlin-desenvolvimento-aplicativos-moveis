@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import tandera.hackerspace.fragment.fragmento.BlankFragment
+import tandera.hackerspace.fragment.fragmento.OutroFragmento
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,10 +28,30 @@ class MainActivity : AppCompatActivity() {
         btnFrag1 = findViewById(R.id.btn_frag1)
         btnFrag2 = findViewById(R.id.btn_frag2)
         btnFrag3 = findViewById(R.id.btn_frag3)
-        val fragmentManager = supportFragmentManager.beginTransaction()
 
-        fragmentManager.add(R.id.fragmentContainerView2,BlankFragment())
+        //val fragmentManager = supportFragmentManager.beginTransaction()
+        //fragmentManager.add(R.id.fragmentContainerView2,BlankFragment())
+        // fragmentManager.commit()
 
-        fragmentManager.commit()
+        btnFrag1.setOnClickListener {
+          supportFragmentManager
+              .beginTransaction()
+              .add(R.id.fragmentContainerView2,BlankFragment())
+              .commit()
+        }
+        btnFrag2.setOnClickListener {
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragmentContainerView2,OutroFragmento())
+                .commit()
+        }
+        btnFrag3.setOnClickListener {
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragmentContainerView2,OutroFragmento())
+                .commit()
+        }
+
+
     }
 }
