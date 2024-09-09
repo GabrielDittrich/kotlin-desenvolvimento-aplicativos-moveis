@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import tandera.hackerspace.fragment.fragmento.BlackFragment3
 import tandera.hackerspace.fragment.fragmento.BlankFragment
 import tandera.hackerspace.fragment.fragmento.OutroFragmento
 
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         btnFrag3.setOnClickListener {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.fragmentContainerView2,OutroFragmento())
+                .replace(R.id.fragmentContainerView2,BlackFragment3())
                 .commit()
         }
 
