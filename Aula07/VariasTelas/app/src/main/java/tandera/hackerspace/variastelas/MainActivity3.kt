@@ -26,5 +26,7 @@ class MainActivity3 : AppCompatActivity() {
         // Receber os extras da Intent
         val bundle = intent.extras
         txtTitulo.text = bundle?.getString("nome_livro") ?: "erro"
+
     }
+
 }
