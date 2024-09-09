@@ -36,19 +36,19 @@ class MainActivity : AppCompatActivity() {
         btnFrag1.setOnClickListener {
           supportFragmentManager
               .beginTransaction()
-              .add(R.id.fragmentContainerView2,BlankFragment())
+              .replace(R.id.fragmentContainerView2,BlankFragment())
               .commit()
         }
         btnFrag2.setOnClickListener {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragmentContainerView2,OutroFragmento())
+                .replace(R.id.fragmentContainerView2,OutroFragmento())
                 .commit()
         }
         btnFrag3.setOnClickListener {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragmentContainerView2,OutroFragmento())
+                .replace(R.id.fragmentContainerView2,OutroFragmento())
                 .commit()
         }
 
