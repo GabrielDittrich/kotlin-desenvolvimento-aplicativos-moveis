@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.testando.aula15.data.LivroViewModel
@@ -36,8 +35,9 @@ class ListFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         livroViewModel = ViewModelProvider(this).get(LivroViewModel::class.java)
+
         livroViewModel.readAllData.observe(viewLifecycleOwner) { livro ->
-            adapter.setData(livro)
+            adapter.setData(livro, parentFragmentManager)
         }
 
 

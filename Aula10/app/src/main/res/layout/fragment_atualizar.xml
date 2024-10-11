@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddFragment">
+    tools:context=".AtualizarFragment">
 
     <Button
-        android:id="@+id/btnAdicionar"
+        android:id="@+id/btnAt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicionar Livro"
+        android:text="Atualizar Livro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
             android:id="@+id/InputLivro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Livro" />
+            android:hint="Nome do Livro" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

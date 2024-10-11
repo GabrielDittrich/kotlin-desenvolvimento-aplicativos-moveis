@@ -30,7 +30,7 @@ class AddFragment : Fragment() {
 
 
         btnVoltar = view.findViewById(R.id.btnVoltar)
-        btnAdd = view.findViewById(R.id.btnAddLivro)
+        btnAdd = view.findViewById(R.id.btnAdicionar)
         txtNomeLivro = view.findViewById(R.id.InputLivro)
 
         //importante -> ViewModelProvider
