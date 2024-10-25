@@ -1,15 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.devtools.ksp") version "1.9.0-1.0.13"
 }
 
 android {
-    namespace = "tandera.hackerspace.coomposeroom"
+    namespace = "com.positivo.comecandocompose"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "tandera.hackerspace.coomposeroom"
+        applicationId = "com.positivo.comecandocompose"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -67,11 +66,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-    val room_version = "2.6.1"
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
-    implementation("androidx.room:room-ktx:$room_version")
-    ksp("androidx.room:room-compiler:$room_version")
-
 }

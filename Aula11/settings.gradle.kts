@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Coompose Room"
+rootProject.name = "ComecandoCompose"
 include(":app")
