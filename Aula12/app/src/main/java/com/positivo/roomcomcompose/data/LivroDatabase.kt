@@ -54,11 +54,6 @@ abstract class LivroDatabase: RoomDatabase() {
             }
 
         }
-
-
-
     }
-
-
 }
 
